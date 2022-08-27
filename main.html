@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1</title>
+	<style>
+		body{padding: 0px; margin: 0px;}
+		.body1 {
+			background: linear-gradient(to left, rgb(227, 66, 51), rgb(82, 25, 8));
+			width: 100%;
+			height: 100%;
+			background-size: 100% 100%;
+		}
+
+		.game {
+			width: 300px;
+			height: 700px;
+			background: linear-gradient(rgb(41, 47, 59), rgb(36, 40, 47));
+		}
+
+		ul li {
+			height: 30px;
+			width: 300px;
+			line-height: 30px;
+			color: rgb(172, 179, 192);
+			list-style: none;
+			flex: 1;
+		}
+
+		input {
+			display: none;
+		}
+
+		li+label {
+			display: block;
+			width: 100%;
+			height: 100%;
+			background: #ccc;
+			font-size: 18px;
+			text-align: center;
+			line-height: 60px;
+			color: #333;
+		}
+
+		input+label+div {
+			display: none;
+			position: absolute;
+			left: 0;
+			top: 90px;
+		}
+
+		input:checked+label {
+			background: #333333;
+			color: #fff;
+		}
+
+		input:checked+label+div{
+			display: block;
+		}
+
+		.tab {
+			width: 1218px;
+			height: 500px;
+			margin-left: 300px;
+			background-color: rgba(0, 174, 255, 0.432);
+			padding: 20px 0px 0px 20px;
+		}
+	</style>
+</head>
+<body>
+<div class="body1">
+	<h1>steam</h1>
+	<div class="game">
+		<ul>
+			<li>
+				<input name="game" type="radio" id="game1" checked><label for="game1">God of war</label>
+				<div class="tab">战神和他的老父亲</div>
+			</li>
+			<li>
+				<input  name="game" type="radio" id="game2"><label for="game2">Sekiro:Shadows die twice</label>
+				<div class="tab">幸运之神</div>
+			</li>
+			<li>
+				<input name="game" type="radio" id="game3"><label for="game3">The witcher wild hunt</label>
+				<div class="tab">要再来一局昆特牌吗</div>
+			</li>
+			<li>
+				<input  name="game" type="radio" id="game4"><label for="game4">Red Dead Redemption 2</label>
+				<div class="tab">我的亚瑟/(ㄒoㄒ)/~~</div>
+			</li>
+		</ul>
+	</div>
+</div>
+</body>
+</html>
