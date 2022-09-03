@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script language= "JavaScript">
+        function WinOpen()
+        {
+            alert(666)
+            window.open("http://www.xiumi.net/","newwindow","height=800,width=1000,toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no");
+        }
+    </script>
+    <style>
+        html{overflow-x:hidden;overflow-y:hidden;}
+        body{padding: 0;
+            margin: 0;
+            font-family: "helvetica neue",arial,sans-serif;
+            font-size: 14px;
+            cursor:default;
+        }
+        .box{
+            display: flex;
+        }
+        .box-l{
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+            height: 500px;
+            padding: 30px 5px;
+            background: url(https://dzimg.bigbigwork.com/bbw/wxregister2.jpg) center center no-repeat;
+            background-size: %100% %100%;
+            color: #fff;
+            width:300px;
+            float:left;
+        }
+        .box-r{
+            flex: 5;
+            width:500px;
+            float:right;
+            margin:0 auto;
+            padding-top:50px;
+            color:#393D49;
+        }
+        .l-head{
+            width:210px;
+            margin:0 auto;
+        }
+        .l-title{
+            letter-spacing: 0.5px;
+            margin-top: 20px;
+        }
+        .l-title-max{
+            line-height: 28px;
+            letter-spacing: 0.5px;
+            font-family: sy-sans,sans-serif;
+            font-size: 28px;
+            font-weight: 400;
+        }
+        .colorfff{
+            color: #fff;
+        }
+        .colorff5722{
+            color:#FF5722
+        }
+        .l-title-min{
+            margin-top: 5px;
+        }
+        .l-pwd{
+            margin-top: 20px;
+            /*position: relative;*/
+            top: 20px;
+        }
+        .l-pwd input{
+            height: 30px;
+            line-height:30px;
+            width:200px;
+            padding: 0 5px;
+            border: none;
+            outline: none;
+            letter-spacing: 1px;
+        }
+        .l-pwd button{
+            border: none;
+            /*position: absolute;*/
+            height: 30px;
+            /*padding-left: 11px;*/
+            top: 0;
+            right: 0;
+            width: 55px;
+            cursor: pointer;
+            color: #212323;
+            letter-spacing: 2px;
+            transition: 0.5s;
+            margin-left: -55px;
+        }
+        .l-pwd button:hover{
+            background-color: #232121;
+            color: azure;
+            transition: 0.5s;
+        }
+        .l-pwd-tips a{
+            color:darkgray;
+            border:none;
+        }
+        .l-footer{
+            width:210px;
+            margin:0 auto;
+            color: darkgray;
+            margin-top:300px;
+        }
+        .l-footer-v{
+            flex: 1;
+        }
+        .l-pwd-tips{
+            color: darkgray;
+            padding: 5px 0px;
+        }
+        .r-domain{
+            letter-spacing: 1.5px;
+        }
+        .r-domain-m{
+            padding: 5px 0px;
+        }
+        .r-domain-m span{
+            padding-left:40px;
+        }
+        .r-news{
+            margin:10px 0px 20px 0px;
+        }
+        .news{
+            margin:-28px 0px 0px 40px;
+            color:#777171;
+            letter-spacing: 1px;
+        }
+        .r-ad{
+            margin:20px 0px;
+        }
+        .closebtn:hover,.minbtn:hover{
+            background-color:#e4e1e1;
+        }
+
+    </style>
+
+    <script>
+        if(event.code == 'F12'){
+            window.event.returnValue = false;
+            return false;
+        }
+    </script>
+</head>
+<body  ondragstart="window.event.returnValue=false" oncontextmenu="window.event.returnValue=false" onselectstart="event.returnValue=false">
+<div class="box">
+    <div class="box-l">
+        <div class="l-head">
+            <div class="l-title">
+                <div class="l-title-max colorfff">喜有，<span style="color:#FF5722">宏</span></div>
+                <div class="l-title-min">780万FPS爱好者正在使用</div>
+            </div>
+            <div class="l-pwd">
+                <div>
+                    <input type="text" placeholder="口令" maxlength="10"/><button id="keybtn">确认</button>
+                </div>
+                <div class="l-pwd-tips"><small>口令可关注"喜有"微信公众号或者打开网站</small><blod>UIMCC.COM</blod><small>免费获取</small></div>
+            </div>
+        </div>
+        <div class="l-footer">
+            <div>状态：<span id="statusDes" class="statusDes"></span></div>
+            <div class="l-footer-v"><small>当前版本:1.0， 软件仅供学习交流</small></div>
+        </div>
+    </div>
+    <div class="box-r">
+        <div style="margin-top: -50px;margin-left:468px;padding-bottom:18px;">
+            <div><img id="minbtn" class="minbtn" src="https://s3.bmp.ovh/imgs/2021/08/2df76888a618b97b.png" width="22" height="22" style="display:block; margin-left:-35px; background-color:;padding:5px;"></div>
+            <div><img id="closebtn" class="closebtn" src="https://s3.bmp.ovh/imgs/2021/08/0851d18412bc72d0.png" width="22" height="22" style="display:block;margin-top:-32px; background-color:;padding:5px;"></div>
+        </div>
+        <div>
+            <div class="l-title-max colorff5722">Hello,</div>
+            <div class="r-news">
+                <img src="https://ftp.bmp.ovh/imgs/2021/07/f54a031e5caec012.png" width="30" height="30">
+                <div class="news" id="news"></div>
+            </div>
+        </div>
+        <div class="r-ad">
+            <img src="https://ftp.bmp.ovh/imgs/2021/07/076909962f62dc21.jpg" width="450" height="100">
+        </div>
+        <div class="r-domain">
+            <div class="r-domain-m">
+                <span>辅助准心# 将在屏幕中心点出现抹不掉的痕迹</span>
+            </div>
+            <div class="r-domain-m">
+                <span>近战攻击# 开镜射击后自动切换为近战武器</span>
+            </div>
+            <div class="r-domain-m">
+                <span>就这速射# 对于子弹间隔时间短的武器可增加射速</span>
+            </div>
+            <div class="r-domain-m">
+                <span>无声鬼跳# 部分工坊地图有惊喜</span>
+            </div>
+            <div class="r-domain-m">
+                <span>一键卡空# 奇妙无穷</span>
+            </div>
+            <div class="r-domain-m">
+                <span>聊天社区# F5-情话 F6-幽默 F7-骚话 F8一言</span>
+            </div>
+            <div class="r-domain-m">
+                <span>散弹填充# 自动右击补充蓄力一击</span>
+            </div>
+            <div class="r-domain-m">
+                <span>1231231阿萨德    </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
