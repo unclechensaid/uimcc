@@ -1,90 +1,202 @@
-<!doctype html>
-<html lang="zh-CN">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-    <title>私有空间</title>
+    <meta charset="UTF-8">
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+    <META HTTP-EQUIV="Expires" CONTENT="0">
+    <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <style>
+        html{overflow-x:hidden;overflow-y:hidden;}
+        body{padding: 0;
+            margin: 0;
+            font-family: "helvetica neue",arial,sans-serif;
+            font-size: 14px;
+            cursor:default;
+        }
+        .box{
+            display: flex;
+        }
+        .box-l{
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
 
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-
-    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
-    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
-    <!--[if lt IE 9]>
-    <script src="https://cdn.jsdelivr.cn/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
-    <script src="https://cdn.jsdelivr.cn/npm/respond.js@1.4.2/dest/respond.min.js"></script>
-    <![endif]-->
+            height: 500px;
+            padding: 30px 5px;
+            background: url(https://s3.bmp.ovh/imgs/2022/09/04/981dd2526aa21cda.png) center center no-repeat;
+            background-size: %100% %100%;
+            color: #fff;
+            width:300px;
+            float:left;
+        }
+        .box-r{
+            flex: 5;
+            width:500px;
+            float:right;
+            margin:0 auto;
+            padding-top:50px;
+            color:#393D49;
+        }
+        .l-head{
+            width:210px;
+            margin:0 auto;
+        }
+        .l-title{
+            letter-spacing: 0.5px;
+            margin-top: 20px;
+        }
+        .l-title-max{
+            line-height: 28px;
+            letter-spacing: 0.5px;
+            font-family: sy-sans,sans-serif;
+            font-size: 28px;
+            font-weight: 400;
+        }
+        .colorfff{
+            color: #fff;
+        }
+        .colorff5722{
+            color:#FF5722
+        }
+        .l-title-min{
+            margin-top: 5px;
+        }
+        .l-pwd{
+            margin-top: 20px;
+            /*position: relative;*/
+            top: 20px;
+        }
+        .l-pwd input{
+            height: 30px;
+            line-height:30px;
+            width:200px;
+            padding: 0 5px;
+            border: none;
+            outline: none;
+            letter-spacing: 1px;
+        }
+        .l-pwd button{
+            border: none;
+            /*position: absolute;*/
+            height: 30px;
+            /*padding-left: 11px;*/
+            top: 0;
+            right: 0;
+            width: 55px;
+            cursor: pointer;
+            color: #212323;
+            letter-spacing: 2px;
+            transition: 0.5s;
+            margin-left: -55px;
+        }
+        .l-pwd button:hover{
+            background-color: #232121;
+            color: azure;
+            transition: 0.5s;
+        }
+        .l-pwd-tips a{
+            color:darkgray;
+            border:none;
+        }
+        .l-footer{
+            width:210px;
+            margin:0 auto;
+            color: darkgray;
+            margin-top:300px;
+        }
+        .l-footer-v{
+            flex: 1;
+        }
+        .l-pwd-tips{
+            color: #ecdbdb;
+            padding: 5px 0px;
+        }
+        .r-domain{
+            letter-spacing: 1.5px;
+        }
+        .r-domain-m{
+            padding: 5px 0px;
+        }
+        .r-news{
+            margin:10px 0px 20px 0px;
+        }
+        .news{
+            margin:-28px 0px 0px 40px;
+            color:#777171;
+            letter-spacing: 1px;
+        }
+        .r-ad{
+            margin:20px 0px;
+        }
+        .closebtn:hover,.minbtn:hover{
+            background-color:#e4e1e1;
+        }
+    </style>
 </head>
-<body>
-    <div class="container">
-        <div class="page-header">
-            <h1>私有空间<small>今天的红包你领取了吗</small></h1>
+<body  ondragstart="window.event.returnValue=false" oncontextmenu="window.event.returnValue=false" onselectstart="event.returnValue=false">
+<div class="box">
+    <div class="box-l">
+        <div class="l-head">
+            <div class="l-title">
+                <div class="l-title-max colorfff">等邻，<span style="color:#FF5722">瞬狙</span></div>
+                <div class="l-title-min"><span id="busuanzi_container_site_pv" style="font-size: 14px;">已被<span id="busuanzi_value_site_pv"></span>位FPS爱好者所喜爱</span></div>
+            </div>
+            <div class="l-pwd">
+                <div>
+                    <input type="text" placeholder="口令" maxlength="10" id="MyTextBox"/><button id="keybtn">确认</button>
+                </div>
+                <div class="l-pwd-tips"><small>口令，淘宝搜索店铺：</small><blod>等邻工作室</blod></div>
+            </div>
         </div>
-<!--        <div class="row">-->
-<!--            <div class="col-md-12">-->
-<!--                <p class="navbar-text navbar-left">Signed in as <a href="#" class="navbar-link">Mark Otto</a></p>-->
+        <div class="l-footer">
+            <div>状态：<span id="statusDes" class="statusDes"></span></div>
+            <div class="l-footer-v">当前版本:<span id="version"></span>，<small>软件仅供学习交流</small></div>
+        </div>
+    </div>
+    <div class="box-r">
+        <div style="margin-top: -50px;margin-left:468px;padding-bottom:18px;">
+            <div><img id="minbtn" class="minbtn" src="https://s3.bmp.ovh/imgs/2021/08/2df76888a618b97b.png" width="22" height="22" style="display:block; margin-left:-35px; background-color:;padding:5px;"></div>
+            <div><img id="closebtn" class="closebtn" src="https://s3.bmp.ovh/imgs/2021/08/0851d18412bc72d0.png" width="22" height="22" style="display:block;margin-top:-32px; background-color:;padding:5px;"></div>
+        </div>
+        <div>
+            <div class="l-title-max colorff5722">Hello,</div>
+<!--            <div class="r-news">-->
+<!--                <img src="https://ftp.bmp.ovh/imgs/2021/07/f54a031e5caec012.png" width="30" height="30">-->
+<!--                <div class="news" id="news"></div>-->
 <!--            </div>-->
-<!--        </div>-->
-        <div class="row">
-            <div class="col-md-12">
-                <textarea class="form-control" rows="3">支付宝搜索:779869348领大额红包</textarea>
-            </div>
         </div>
-<!--        <div class="row">-->
-<!--            <div class="col-md-8">.col-md-8</div>-->
-<!--            <div class="col-md-4">.col-md-4</div>-->
-<!--        </div>-->
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <ul class="nav nav-pills">
-                    <li role="presentation"><a href="#">热门</a></li>
-                    <li role="presentation"><a href="#">精选</a></li>
-                    <li role="presentation" class="disabled"><a href="#">更多</a></li>
-                </ul>
-<!--                <ul class="list-group">-->
-<!--                    <li class="list-group-item">Cras justo odio</li>-->
-<!--                    <li class="list-group-item">Dapibus ac facilisis in</li>-->
-<!--                    <li class="list-group-item">Morbi leo risus</li>-->
-<!--                    <li class="list-group-item">Porta ac consectetur ac</li>-->
-<!--                    <li class="list-group-item">Vestibulum at eros</li>-->
-<!--                </ul>-->
-            </div>
+        <div class="r-ad">
+            <img src="https://ftp.bmp.ovh/imgs/2021/07/076909962f62dc21.jpg" width="450" height="100">
         </div>
-        <ul class="media-list">
-            <li class="media">
-                <div class="media-left">
-                    <span class="glyphicon glyphicon-fire" aria-hidden="true" style="color:red;"></span>
-                </div>
-                <div class="media-body">
-                    <a href="#" class="text-danger">支付宝搜索:779869348领大额红包<span class="badge">4</span></a>
-                </div>
-            </li>
-            <!--<li class="media">
-                <div class="media-left">
-                    <span class="glyphicon glyphicon-fire" aria-hidden="true" style="color:red;"></span>
-                </div>
-                <div class="media-body">
-                    <a href="#" class="text-warning">卫健委：绝不许非疫情因素赋码变码热</a>
-                </div>
-            </li>
-            <li class="media">
-                <div class="media-left">
-                    <span class="glyphicon glyphicon-fire" aria-hidden="true" style="color:red;"></span>
-                </div>
-                <div class="media-body">
-                    <a href="#" class="text-info">男生高考677分淡定说至少不用复读了</a>
-                </div>
-            </li>
-            <li class="media">
-                <div class="media-body">
-                    <a href="#" class="text-info">南方进入流感高发期 门诊爆满热</a>
-                </div>
-            </li>-->
-        </ul>
+        <div class="r-domain">
+<!--            <div class="r-domain-m">-->
+<!--                <span><a href="https://m.tb.cn/h.UbAHtgO">淘宝热卖榜单会场，看看大家都在买神马</a></span>-->
+<!--            </div>-->
+<!--            <div class="r-domain-m">-->
+<!--                <span>近战攻击# 开镜射击后自动切换为近战武器</span>-->
+<!--            </div>-->
+<!--            <div class="r-domain-m">-->
+<!--                <span>就这速射# 对于子弹间隔时间短的武器可增加射速</span>-->
+<!--            </div>-->
+<!--            <div class="r-domain-m">-->
+<!--                <span>无声鬼跳# 部分工坊地图有惊喜</span>-->
+<!--            </div>-->
+<!--            <div class="r-domain-m">-->
+<!--                <span>一键卡空# 奇妙无穷</span>-->
+<!--            </div>-->
+<!--            <div class="r-domain-m">-->
+<!--                <span>聊天社区# F5-情话 F6-幽默 F7-骚话 F8一言</span>-->
+<!--            </div>-->
+<!--            <div class="r-domain-m">-->
+<!--                <span>散弹填充# 自动右击补充蓄力一击</span>-->
+<!--            </div>-->
+            <iframe src="layoutcontent.html"  frameborder="no" width="445px" height="335px" id="bi_iframe"></iframe>
+        </div>
     </div>
+</div>
+
 </body>
 </html>
