@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+    <META HTTP-EQUIV="Expires" CONTENT="0">
+    <script type="text/javascript" charset="UTF-8" src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+    <style>
+        html{overflow-x:hidden;overflow-y:hidden;}
+        body{padding: 0;
+            margin: 0;
+            font-family: "helvetica neue",arial,sans-serif;
+            font-size: 14px;
+            cursor:default;
+        }
+        .box{
+            display: flex;
+        }
+        .box-l{
+            flex: 3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+
+            height: 500px;
+            padding: 30px 5px;
+            background: url(https://s3.bmp.ovh/imgs/2022/09/17/5640f1b1aab98a68.png) center center no-repeat;
+            background-size: %100% %100%;
+            color: #fff;
+            width:300px;
+            float:left;
+        }
+        .box-r{
+            flex: 5;
+            width:500px;
+            float:right;
+            margin:0 auto;
+            padding-top:50px;
+            color:#393D49;
+        }
+        .l-head{
+            width:210px;
+            margin:0 auto;
+        }
+        .l-title{
+            letter-spacing: 0.5px;
+            margin-top: 20px;
+        }
+        .l-title-max{
+            line-height: 28px;
+            letter-spacing: 0.5px;
+            font-family: sy-sans,sans-serif;
+            font-size: 28px;
+            font-weight: 400;
+        }
+        .colorfff{
+            color: #fff;
+        }
+        .colorff5722{
+            color:#FF5722
+        }
+        .l-title-min{
+            margin-top: 5px;
+        }
+        .l-pwd{
+            margin-top: 20px;
+            /*position: relative;*/
+            top: 20px;
+        }
+        .l-pwd input{
+            height: 30px;
+            line-height:30px;
+            width:200px;
+            padding: 0 5px;
+            border: none;
+            outline: none;
+            letter-spacing: 1px;
+        }
+        .l-pwd button{
+            border: none;
+            /*position: absolute;*/
+            height: 30px;
+            /*padding-left: 11px;*/
+            top: 0;
+            right: 0;
+            width: 55px;
+            cursor: pointer;
+            color: #212323;
+            letter-spacing: 2px;
+            transition: 0.5s;
+            margin-left: -55px;
+        }
+        .l-pwd button:hover{
+            background-color: #232121;
+            color: azure;
+            transition: 0.5s;
+        }
+        .l-pwd-tips a{
+            color:darkgray;
+            border:none;
+        }
+        .l-footer{
+            width:210px;
+            margin:0 auto;
+            color: darkgray;
+            margin-top:300px;
+        }
+        .l-footer-v{
+            flex: 1;
+        }
+        .l-pwd-tips{
+            color: #ecdbdb;
+            padding: 5px 0px;
+        }
+        .r-domain{
+            letter-spacing: 1.5px;
+        }
+        .r-domain-m{
+            padding: 5px 0px;
+        }
+        .r-news{
+            margin:10px 0px 20px 0px;
+        }
+        .news{
+            margin:-28px 0px 0px 40px;
+            color:#777171;
+            letter-spacing: 1px;
+        }
+        .r-ad{
+            margin:20px 0px;
+        }
+        .closebtn:hover,.minbtn:hover{
+            background-color:#e4e1e1;
+        }
+    </style>
+</head>
+<body  ondragstart="window.event.returnValue=false" oncontextmenu="window.event.returnValue=false" onselectstart="event.returnValue=false">
+<div class="box">
+    <div class="box-l">
+        <div class="l-head">
+            <div class="l-title">
+                <div class="l-title-max colorfff">等邻，<span id="softwareName" style="color:#FF5722"></span></div>
+                <div class="l-title-min"><span id="busuanzi_container_site_pv" style="font-size: 14px;">已被<span id="busuanzi_value_site_pv">752万</span>位FPS爱好者所喜爱</span></div>
+            </div>
+            <div class="l-pwd">
+                <div>
+                    <input type="text" placeholder="口令" maxlength="10" id="MyTextBox"/><button id="keybtn">确认</button>
+                </div>
+                <div class="l-pwd-tips"><small>口令，淘宝搜索店铺：</small><blod>等邻工作室</blod></div>
+            </div>
+        </div>
+        <div class="l-footer">
+            <div>状态：<span id="statusDes" class="statusDes"></span></div>
+            <div class="l-footer-v">当前版本:<span id="version"></span>，<small>软件仅供学习交流</small></div>
+        </div>
+    </div>
+    <div class="box-r">
+        <div style="margin-top: -50px;margin-left:468px;padding-bottom:18px;">
+            <div><img id="minbtn" class="minbtn" src="https://s3.bmp.ovh/imgs/2021/08/2df76888a618b97b.png" width="22" height="22" style="display:block; margin-left:-35px; background-color:;padding:5px;"></div>
+            <div><img id="closebtn" class="closebtn" src="https://s3.bmp.ovh/imgs/2021/08/0851d18412bc72d0.png" width="22" height="22" style="display:block;margin-top:-32px; background-color:;padding:5px;"></div>
+        </div>
+        <div>
+            <div class="l-title-max colorff5722">Hello,</div>
+<!--            <div class="r-news">-->
+<!--                <img src="https://ftp.bmp.ovh/imgs/2021/07/f54a031e5caec012.png" width="30" height="30">-->
+<!--                <div class="news" id="news"></div>-->
+<!--            </div>-->
+        </div>
+        <div class="r-ad">
+            <img src="https://s3.bmp.ovh/imgs/2022/09/05/ff36d3d872d03ae5.png" width="450" height="100">
+        </div>
+        <div class="r-ad">
+            <img src="https://s3.bmp.ovh/imgs/2022/09/05/e31a915137d68e62.png" width="450" height="100">
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
