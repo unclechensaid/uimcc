@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>layout</title>
+    <style>
+        html{
+            font-family: Alibaba Sans,-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+            /*line-height: 1.15;*/
+        }
+        body{margin: 0px; padding: 0px;font-size: 14px; letter-spacing: 0.5px;cursor:default;}
+        span{font-size: 13px;}
+        .bor-bo{
+            border-bottom: 1px solid rgba(93, 109, 129, 0.1);
+            padding: 8px 0px 30px 0px;
+        }
+        .main{width: 900px; height: 600px; background-color: ;}
+        .left_c{width: 500px; height: 800px; background-color: ; float: left; background-image: url("https://gd-hbimg.huaban.com/6a349a123fc1bd1a8283ef729c6bf798f128f7e77dba3-rudjpo_fw658webp")}
+        .right_c{width: 400px; height: 800px; background-color: ; float: left;background: linear-gradient(135deg, #a1c4fd, #c2e9fb);;}
+        .rc_m{ padding: 20px; margin-top: 20px;}
+        .l-pwd{
+            /*margin-top: 20px;*/
+            /*position: relative;*/
+            /*top: 200px;*/
+            height: 30px;
+        }
+        /*用于清除l-pwd的浮动*/
+        /*.l-pwd::after {*/
+        /*    content: "";*/
+        /*    display: block;*/
+        /*    clear: both;*/
+        /*}*/
+        .l-pwd input{
+            height: 35px;
+            line-height:35px;
+            width:250px;
+            padding: 0 15px;
+            border: none;
+            outline: none;
+            letter-spacing: 2px;
+            border-bottom: 1px solid #e88f97;
+            background-color: rgba(93, 109, 129, 0.1);
+        }
+        .l-pwd button{
+            border: none;
+            /*position: absolute;*/
+            height: 36px;
+            /*padding-left: 11px;*/
+            top: 0;
+            right: 0;
+            width: 65px;
+            cursor: pointer;
+            color: #ffffff;
+            letter-spacing: 2px;
+            transition: 0.5s;
+            margin-left: -55px;
+            background-color: #ff5967;
+            line-height: 30px;
+        }
+        .l-pwd button:hover{
+            background-color: #232121;
+            color: azure;
+            transition: 0.5s;
+        }
+
+
+        .aNFS41JL::before {
+            content: "体验";
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            transform: skew(-10deg) scale(0.8);
+            background-color: rgb(255, 89, 103);
+            height: 20px;
+            line-height: 20px;
+            margin-right: 2px;
+            font-size: 13px;
+            font-weight: lighter;
+            border-radius: 5px;
+            padding: 0px 3px;
+        }
+
+        .aNFS41JLT::before {
+            content: "资讯";
+            color: rgb(255, 255, 255);
+            display: inline-block;
+            transform: skew(180deg) scale(0.8);
+            background-color: rgb(14, 12, 12);
+            height: 20px;
+            line-height: 20px;
+            margin-right: 2px;
+            font-size: 13px;
+            font-weight: lighter;
+            border-radius: 5px;
+            padding: 0px 3px;
+        }
+
+        .closebtn:hover,.minbtn:hover{
+            background-color:#232121;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="left_c"></div>
+        <div class="right_c">
+            <div style="height: 30px;padding: 10px;">
+                <div style="float: right"><img alt="关闭" id="closebtn" class="closebtn" src="https://cocoo.gitee.io/uimcc/img/close.png" width="25" height="25" style="padding:10px;"></div>
+                <div style="float: right"><img alt="最小化" id="minbtn" class="minbtn" src="https://cocoo.gitee.io/uimcc/img/min.png" width="25" height="25" style="padding:10px;"></div>
+            </div>
+            <div class="rc_m">
+
+
+                <div>
+                    <a class="aNFS41JL">对你说丨</a><span>让纯纯的大白菜也甜</span>
+                </div>
+
+
+                <div class="l-pwd bor-bo">
+                    <div style="float: left">
+                        <input type="text" placeholder="" maxlength="30" id="MyTextBox"/>
+                    </div>
+                    <div style="float: left">
+                        <button class="pwdbtn" id="keybtn">登录</button>
+                    </div>
+                </div>
+
+                <div style="margin-top: 40px;">
+                    <a class="aNFS41JLT">资源坊间</a>
+                </div>
+                <div style="padding: 8px 0px 30px 0px;">
+                    <iframe scrolling="no" src="https://widget.tianqiapi.com/?style=tx&skin=pitaya" frameborder="0" width="100%" height="30" allowtransparency="true"></iframe>
+                </div>
+
+
+                <div style="margin-top: 40px;">
+                    <a class="">使用须知</a>
+                </div>
+                <div style="padding: 8px 0px 30px 0px;">
+                    <span style="color: #5b5a59">当前脚本包括但不局限于操控用户计算机鼠标或键盘等，如对此表示有疑义请立即删除本脚本。脚本仅供学习交流，请勿用于任何不法用途</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
