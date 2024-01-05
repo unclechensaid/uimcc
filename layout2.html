@@ -2,21 +2,27 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>layout</title>
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+    <META HTTP-EQUIV="Expires" CONTENT="0">
     <style>
-        html{
-            font-family: Alibaba Sans,-apple-system,BlinkMacSystemFont,Segoe UI,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
-            /*line-height: 1.15;*/
+        html{overflow-x:hidden;overflow-y:hidden;}
+        body{padding: 0;
+            margin: 0;
+            font-family: "helvetica neue",arial,sans-serif;
+            font-size: 14px;
+            cursor:default;
         }
-        body{margin: 0px; padding: 0px;font-size: 14px; letter-spacing: 0.5px;cursor:default;}
-        span{font-size: 13px;}
+        span{font-size: 12px; letter-spacing: 0.5px;}
         .bor-bo{
             border-bottom: 1px solid rgba(93, 109, 129, 0.1);
             padding: 8px 0px 30px 0px;
         }
         .main{width: 900px; height: 600px; background-color: ;}
-        .left_c{width: 500px; height: 800px; background-color: ; float: left; background-image: url("https://gd-hbimg.huaban.com/6a349a123fc1bd1a8283ef729c6bf798f128f7e77dba3-rudjpo_fw658webp")}
-        .right_c{width: 400px; height: 800px; background-color: ; float: left;background: linear-gradient(135deg, #a1c4fd, #c2e9fb);;}
+        .left_c{width: 500px; height: 800px; background-color: ; float: left; background-image: url("8.png")}
+        .right_c{width: 400px; height: 800px; background-color: ; float: left;background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a1c4fd', endColorstr='#c2e9fb',GradientType=0 );}
+        :root {filter:none;}
         .rc_m{ padding: 20px; margin-top: 20px;}
         .l-pwd{
             /*margin-top: 20px;*/
@@ -44,18 +50,21 @@
         .l-pwd button{
             border: none;
             /*position: absolute;*/
-            height: 36px;
+            height: 35px;
             /*padding-left: 11px;*/
-            top: 0;
-            right: 0;
+            /*top: 0;*/
+            /*right: 0;*/
             width: 65px;
-            cursor: pointer;
+            /*cursor: pointer;*/
             color: #ffffff;
-            letter-spacing: 2px;
-            transition: 0.5s;
-            margin-left: -55px;
+            letter-spacing: 3px;
+            /*transition: 0.5s;*/
+            margin-left: -65px;
+            margin-top: 1px;
+            /*background-color: blue;*/
             background-color: #ff5967;
-            line-height: 30px;
+            line-height: 35px;
+            text-align: center;
         }
         .l-pwd button:hover{
             background-color: #232121;
@@ -64,7 +73,7 @@
         }
 
 
-        .aNFS41JL::before {
+        .aNFS41JL {
             content: "体验";
             color: rgb(255, 255, 255);
             display: inline-block;
@@ -73,13 +82,13 @@
             height: 20px;
             line-height: 20px;
             margin-right: 2px;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: lighter;
             border-radius: 5px;
             padding: 0px 3px;
         }
 
-        .aNFS41JLT::before {
+        .aNFS41JLT{
             content: "资讯";
             color: rgb(255, 255, 255);
             display: inline-block;
@@ -88,7 +97,7 @@
             height: 20px;
             line-height: 20px;
             margin-right: 2px;
-            font-size: 13px;
+            font-size: 12px;
             font-weight: lighter;
             border-radius: 5px;
             padding: 0px 3px;
@@ -105,6 +114,10 @@
         <div class="left_c"></div>
         <div class="right_c">
             <div style="height: 30px;padding: 10px;">
+                <div style="float: left"><img alt="解绑" id="rolebtn" class="closebtn" src="https://cocoo.gitee.io/uimcc/img/role2.png" width="16" height="16" style="padding:14px;"></div>
+                <div style="float: left"><img alt="重启" id="reloadbtn" class="closebtn" src="https://cocoo.gitee.io/uimcc/img/reload2.png" width="16" height="16" style="padding:14px;"></div>
+                <!-- <div style="float: left"><img alt="隐藏TAB" id="closebtn" class="closebtn" src="https://cocoo.gitee.io/uimcc/img/hide.png" width="16" height="16" style="padding:14px;"></div> -->
+                
                 <div style="float: right"><img alt="关闭" id="closebtn" class="closebtn" src="https://cocoo.gitee.io/uimcc/img/close.png" width="25" height="25" style="padding:10px;"></div>
                 <div style="float: right"><img alt="最小化" id="minbtn" class="minbtn" src="https://cocoo.gitee.io/uimcc/img/min.png" width="25" height="25" style="padding:10px;"></div>
             </div>
@@ -112,13 +125,13 @@
 
 
                 <div>
-                    <a class="aNFS41JL">对你说丨</a><span>让纯纯的大白菜也甜</span>
+                    <a class="aNFS41JL">想对你说</a><span>小可爱在下面输入口令喔</span>
                 </div>
 
 
                 <div class="l-pwd bor-bo">
                     <div style="float: left">
-                        <input type="text" placeholder="" maxlength="30" id="MyTextBox"/>
+                        <input type="text" placeholder="口令" maxlength="30" id="MyTextBox"/>
                     </div>
                     <div style="float: left">
                         <button class="pwdbtn" id="keybtn">登录</button>
