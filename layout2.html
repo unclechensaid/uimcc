@@ -112,7 +112,7 @@
 <body ondragstart="window.event.returnValue=false" oncontextmenu="window.event.returnValue=false" onselectstart="event.returnValue=false">
     <div class="main">
         <div class="left_c"></div>
-        <div class="right_c">
+        <div class="right_c" style=" position: relative;">
             <div style="height: 30px;padding: 10px;">
                 <div style="float: left"><img alt="解绑" id="rolebtn" class="closebtn" src="img/role2.png" width="16" height="16" style="padding:15px;"></div>
                 <div style="float: left"><img alt="重启" id="reloadbtn" class="closebtn" src="img/reload2.png" width="16" height="16" style="padding:15px;"></div>
@@ -146,14 +146,17 @@
                 </div>
 
 
-                <div style="margin-top: 40px;">
-                    <a class="">使用须知</a>
-                </div>
-                <div style="padding: 8px 0px 30px 0px;">
-                    <span style="color: #5b5a59; font-size: 12px;">当前脚本包括但不局限于操控用户计算机鼠标或键盘等，如对此表示有疑义请立即删除本脚本。脚本仅供学习交流，请勿用于任何不法用途
-                        </br></br></br>1.若口令不能输入可多点击几次输入框
-                        </br>2.当天需要更换机器请先点击上方解绑按钮
-                    </span>
+                <div style=" position: absolute; bottom:0; width:360px;">
+                    <div>
+                        <a class="">使用须知</a>
+                    </div>
+                    <div style="padding: 8px 0px 30px 0px; ">
+                        <span style="color: #5b5a59; font-size: 12px;">当前脚本包括但不局限于操控用户计算机鼠标或键盘等，如对此表示有疑义请立即删除本脚本。脚本仅供学习交流，请勿用于任何不法用途
+                            </br></br></br>1.若口令不能输入可多点击几次输入框
+                            </br>2.当天需要更换机器请先点击上方解绑按钮
+                            </br>3.若提示系统异常，可对比手机查看计算机时间是否正确
+                        </span>
+                    </div>
                 </div>
 
             </div>
